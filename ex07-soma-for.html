@@ -21,6 +21,28 @@
             os dois valores informados (inclusive).            
         */
 
+        let num1
+        let num2
+        let soma
+
+        do {
+            num1 = parseInt(prompt('Informe o primeiro número inteiro:'))
+            num2 = parseInt(prompt('Informe o segundo número inteiro:'))
+
+            if(! isNaN(num1)) || (! isNaN(num2) || num1 === num2) {
+                alert('Os números informados não são válidos!')
+            }
+            else {
+                soma = num1 + num2
+            }    
+        } while(num1 !== num2)
+
+        for(let i = num1; i <= num2; i++) {
+            document.write(i + '<br>') 
+        }
+
+        alert(`A soma dos números informados é ${soma}.`)
+
     </script>
 </head>
 <body>
