@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora DOM</title>
+    
+</head>
+<body>
+    <h1>Calculadora DOM</h1>
+
+    <div>
+        <label for="num1">Primeiro número</label>
+        <input id="num1" type="number">
+    </div>
+
+    <div>
+        <label for="oper">Operação</label>
+        <select id="oper">
+            <option>(Selecione)</option>
+            <option>Soma (+)</option>
+            <option>Subtração (-)</option>
+            <option>Multiplicação (*)</option>
+             <option>Divisão (/)</option>
+        </select>
+    </div>
+
+    <div>
+        <label for="num2">Segundo número</label>
+        <input id="num2" type="number">
+    </div>
+
+    <div>
+        <button id="calcular">Calcular</button>
+    </div>
+
+    <div id="resultado"></div>
+    
+    <script>
+        // Ativa verificações adicionais de variáveis
+        // Modo "chato" do JavaScript
+        'use strict'
+
+        // 1) Capturar os elementos HTML
+        const elPrimeiroNumero = document.getElementById('num1')
+        const elOperação = document.getElementById('oper')
+        const elSegundoNumero = document.getElementById('num2')
+        const elCalcular = document.getElementById('calcular')
+
+        // 2) Declarar a função de validação do formulário
+        function validar() {
+            if(elPrimeiroNumero.value === '') {
+                alert('O primeiro número deve ser informado.')
+                elPrimeiroNumero.focus()  // Coloca o cursor no campo
+                return false
+            }
+
+            if(elOperação.selectedIndex === 0) {
+                alert('Selecione uma operação.')
+                elOperação.focus()
+                return false
+            }
+
+            if(elSegundoNumero.value === '') {
+                alert('O segundo número deve ser informado.')
+                elFormaTratamento.focus()
+                return false
+            }
+
+            return true  // O formulário está válido
+        }
+
+        // 3) Declarar a função que faz o cálculo, de acordo
+        // com a operação escolhida pelo usuário. Dentro desta
+        // função, deve ser chamada a função de validação
+
+        // 4) Associar a função que faz o cálculo ao evento
+        // 'click' do botão
+
+    </script>
+</body>
+</html>
