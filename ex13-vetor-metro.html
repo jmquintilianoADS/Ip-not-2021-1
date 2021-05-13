@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modelo de documento HTML</title>
+    <script>
+        // 'use strict' impede que variáveis sejam declaradas
+        // sem o uso de let, var ou const
+        // Inicializar variáveis diretamente é má prática de
+        // programação
+        'use strict'
+        
+        /*
+        
+            O ano é 2119. A prefeita Enza Valentina Faleiros Trajano 
+            Bittar da Silva inaugura a primeira linha do Metrô de Franca, 
+            no sentido norte-sul, com as seguintes estações: Santa Teresinha,
+            Estação, Centro, Jardim Lima e Aeroporto I.
+            
+            1) Crie um vetor vazio e depois insira as estações no
+                vetor. Faça um loop for TRADICIONAL para exibir as 
+                estações e depois passe um traço horizontal (<hr>).
+                
+            No ano seguinte, a linha foi expandida com a inauguração
+            das estações City Petrópolis, no extremo norte, e Aeroporto
+            IV, no extremo sul.
+            
+            2) Insira as novas estações no vetor nas posições apropriadas.
+                Faça um loop FOR..OF para exibir as estações e depois
+                passe um traço horizontal (<hr>).
+                
+            Já em 2125, foi criada a estação Vila Imperador, entre
+            as estações Santa Teresinha e Estação, para atender à grande
+            demanda da maior universidade da cidade, a Fatec de Franca.
+            Um ano depois, a estação Jardim Alvorada passou a funcionar
+            entre as estações Jardim Lima e Aeroporto I.
+            
+            3) Insira as novas estações no vetor nas posições apropriadas.
+                Faça um loop for TRADICIONAL EM SENTIDO INVERSO para exibir
+                as estações e depois passe um traço horizontal (<hr>).
+                
+            Em 2130, a estação Centro foi desativada, e em seu lugar duas
+            novas estações entraram em funcionamento: as estações 9 de Julho
+            e Champagnat.
+            
+            4) Modifique o vetor de acordo com as alterações.
+                Faça um loop for TRADICIONAL para exibir as estações e depois
+                passe um traço horizontal (<hr>).
+                
+            Em 2133, no entanto, Franca entrou em guerra com os 
+            restinguenses, que invadiram e destruíram as duas estações 
+            mais ao sul do metrô de Franca. Neste mesmo ano, em meio
+            à crise, foi fechada a estação Santa Teresinha.
+            
+            5) Modifique o vetor de acordo com as alterações.
+                Faça um loop FOR...OF para exibir as estações e depois
+                passe um traço horizontal (<hr>).            
+        */
+
+        // 1 - Vetor vazio
+        let vazio = []
+
+        // Estações inseridas no vetor
+        let estações = ['Santa Terezinha', 'Estação', 'Centro', 'Jardim Lima', 'Aeroporto I']
+
+        // Loop for tradicional para exibir estações
+        for(let i = 0; i < estações.length; i++) {
+            document.write(estações[i].toUpperCase() + '<br>')
+        }
+
+        // Linha horizontal
+        document.write('<hr>')
+
+        // Inserindo as novas estações:
+        estações.unshift('City Petrópolis')
+        document.write('Inserida nova estação (Extremo Norte): ' + estações + '<br>')
+
+        estações.push('Aeroporto IV')
+        document.write('Inserida nova estação (Extremo Sul): ' + estações + '<br>')
+
+        // Linha horizontal
+        document.write('<hr>')
+
+        // 2 - Inserindo as novas estações
+        // Loop for..of
+        for(let elemento of estações) {
+            document.write(elemento.toUpperCase() + '<br>')
+        }
+
+        // Linha horizontal
+        document.write('<hr>')
+
+        // Inserindo as novas estações nas posições específicas:
+
+        estações.splice(2, 0, 'Vila Imperador')
+        document.write('Inserida nova estação entre Santa Terezinha e Estação: ' + estações + '<br>')
+
+        estações.splice(6, 0, 'Jardim Alvorada')
+        document.write('Inserida nova estação entre Jardim Lima e Aeroporto I: ' + estações + '<br>')
+
+        // Linha horizontal
+        document.write('<hr>')
+
+         // 3 - Estações na ordem inversa
+         // Loop for tradicional
+        for(let i = estações.length - 1; i >= 0; i--) {
+            document.write(estações[i].toUpperCase() + '<br>')
+        }
+
+        // Linha horizontal
+        document.write('<hr>')
+
+        // Estação 'Centro' desativada
+        let desativada = estações
+        desativada = estações.splice(4, 1)
+        document.write(desativada + '<br>')
+        document.write('Estações: ' + estações + '<br>')
+
+        // Inserida duas novas estações no lugar
+        estações.splice(4, 0, '9 de Julho')
+        estações.splice(5, 0, 'Champagnat')
+        document.write('Inseridas novas estações no lugar: ' + estações + '<br>')
+
+        // Linha horizontal
+        document.write('<hr>')
+
+        // 4 - Novo vetor após alterações
+        // Loop for tradicional para exibir as estações
+        for(let i = 0; i < estações.length; i++) {
+            document.write(estações[i].toUpperCase() + '<br>')
+        }
+
+        // Linha horizontal
+        document.write('<hr>')
+
+        // Guerra Franca x Restinga
+        let invasao = estações.pop()
+        document.write(invasao + '<br>')
+        let devastação = estações
+        devastação = estações.splice(8, 1)
+        document.write(devastação + '<br>')
+        document.write('Estações: ' + estações + '<br>')
+
+        // Linha horizontal
+        document.write('<hr>')
+
+        // Crise em 2133
+        let crise = estações
+        crise = estações.splice(1, 1)
+        document.write(crise + '<br>')
+        document.write('Estações: ' + estações + '<br>')
+
+        // Linha horizontal
+        document.write('<hr>')
+
+        // 5 - Novo vetor após as últimas alterações
+        // Loop for..of
+        for(let elemento of estações) {
+            document.write(elemento.toUpperCase() + '<br>')
+        }
+
+        // Linha horizontal
+        document.write('<hr>')
+
+               
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
