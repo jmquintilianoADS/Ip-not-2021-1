@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Franca/SP no Censo 2010</title>
+    <style>
+        html {
+            font-family: Calibri, Arial, sans;
+            font-size: 16px;
+        }
+        body {
+            background-color: #95CFF4;
+        }
+        main {
+            background-color: #444444;
+            color: #dddddd;
+            padding: 40px;
+            max-width: 80%;
+            margin: 50px auto;
+            border-radius: 20px;
+            box-shadow: 6px 6px 10px rgba(0, 0, 0, 0.6);
+        }
+        h1 {
+            color: #95CFF4;
+            text-align: center;
+            text-shadow: 1px 1px 2px rgb(255, 255, 255, 0.5);
+            font-size: 2.5rem;
+        }
+        img {
+            width: 400px;
+            display: block;
+            margin: 20px auto;
+        }
+        #dados {
+            text-align: center;
+            font-size: 1.2rem;
+            width: 550px;
+            margin: 0 auto;
+        }
+    </style>   
+</head>
+<body>
+    <main>
+        <h1>Franca/SP no Censo 2010</h1>
+        <img src="bandeira-franca.jpg" alt="Bandeira de Franca/SP" />
+        <ul id="dados"></ul>
+    </main>
+    <script>
+        // Ativa verificações adicionais de variáveis
+        // Modo "chato" do JavaScript
+        'use strict'
+
+        const populacao = [
+            23,	    // +100 anos
+            118,	// 95 a 99 anos
+            513,	// 90 a 94 anos
+            1225,	// 85 a 89 anos
+            2773,	// 80 a 84 anos
+            4498,	// 75 a 79 anos
+            6524,	// 70 a 74 anos
+            8558,	// 65 a 69 anos
+            12147,	// 60 a 64 anos
+            15296,	// 55 a 59 anos
+            19013,	// 50 a 54 anos
+            22012,	// 45 a 49 anos
+            23369,	// 40 a 44 anos
+            23766,	// 35 a 39 anos
+            25220,	// 30 a 34 anos
+            27131,	// 25 a 29 anos
+            28617,	// 20 a 24 anos
+            27294,	// 15 a 19 anos
+            26479,	// 10 a 14 anos
+            23098,	// 5 a 9 anos
+            20966,	// 0 a 4 anos
+        ]
+
+        const info = {
+            altitude: 1040,
+            'aniversário': '28/11',
+            'gentílico': 'francano',
+            'área': 605.679            
+        }
+
+
+
+        const dados = document.querySelector('#dados')
+
+        /*
+        dados.unshift('Altitude: ')
+        dados.unshift('Aniversário: ')
+        dados.unshift('Gentílico: ')
+        dados.unshift('Área: ')
+        dados.unshift('População: ')
+        dados.unshift('Densidade Populacional: ')
+
+        */
+
+        let dados = []
+
+        dados1.unshift('Altitude: ')
+        dados1.unshift('Aniversário: ')
+        dados1.unshift('Gentílico: ')
+        dados1.unshift('Área: ')
+        dados1.unshift('População: ')
+        dados1.unshift('Densidade Populacional: ')
+
+        for(let dados of dadosl)
+            let item = document.createElement('li')
+            item.textContent = dados
+            dados.appendchild(item)
+
+
+
+</body>
+</html>
